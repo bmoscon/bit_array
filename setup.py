@@ -1,3 +1,12 @@
+'''
+
+Copyright (c) 2016 Bryant Moscon - bmoscon@gmail.com
+
+See LICENSE file for the terms and conditions
+associated with this software.
+
+'''
+
 from setuptools import setup
 from setuptools import find_packages
 from setuptools.command.test import test as TestCommand
@@ -18,11 +27,7 @@ class PyTest(TestCommand):
         self.test_suite = True
 
     def run_tests(self):
-        logging.basicConfig(format='%(asctime)s %(levelname)s %(name)s %(message)s', level='DEBUG')
-
-        # import here, cause outside the eggs aren't loaded
         import pytest
-
         args = [self.pytest_args] if isinstance(self.pytest_args, six.string_types) else list(self.pytest_args)
         errno = pytest.main(args)
         sys.exit(errno)

@@ -1,3 +1,12 @@
+'''
+
+Copyright (c) 2016 Bryant Moscon - bmoscon@gmail.com
+
+See LICENSE file for the terms and conditions
+associated with this software.
+
+'''
+
 import array
 from math import log
 
