@@ -13,20 +13,17 @@ class BitArray(object):
         
         self.bits = array.array('L', (0,) * size)
 
-    def __getitem__(self, index):
-
-    def __setitem__(self, index, value)
+    def __setitem__(self, index, value):
         array_index = index >> self.elem_size
         bit_position = index & self.elem_mask
         mask = 1 <<  bit_position
         if value:
+            self.bits[array_index] |= mask
+        else:
             mask = ~mask
             self.bits[array_index] &= mask
-        else:
-            self.bits[array_index] |= mask
 
-
-    def __getitem__(self, index)
+    def __getitem__(self, index):
         array_index = index >> self.elem_size
         bit_position = index & self.elem_mask
         mask = 1 << bit_position
