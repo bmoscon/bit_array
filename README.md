@@ -10,20 +10,20 @@ b[1] = 0
 
 You can also initialize with a list:
 
-'''
+```
 b = BitArray([0,1,0,1,0,1,0,1])
 print(b[1])
 >>> 1
-'''
+```
 
 You can also access parts of the array with slice operations:
 
-'''
+```
 sliced = b[0:4]
 print(sliced[1])
->>> 1
+>> 1
 len(sliced)
 >>> 4
-'''
+```
 
 
