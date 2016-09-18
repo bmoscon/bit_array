@@ -10,6 +10,7 @@ associated with this software.
 import array
 from math import ceil
 
+
 class BitArray(object):
     def __init__(self, bits):
         # L = 4 bytes minimum, but could be 8 bytes. No need to waste all that space
@@ -33,6 +34,14 @@ class BitArray(object):
 
     def __len__(self):
         return self.size
+
+    def __str__(self):
+        pad = self.size % self.elem_size
+        arr_len = len(self.bits)
+        return '0b' + ''.join([bin(self.bits[i])[2:].zfill(pad)[::-1] for i in range(arr_len)])
+
+    def __repr__(self):
+        return self.__str__() 
 
     def __setitem__(self, index, value):
         if index > self.size:
