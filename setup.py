@@ -27,7 +27,7 @@ class PyTest(TestCommand):
 
     def run_tests(self):
         import pytest
-        args = [self.pytest_args] if not isinstance(self.pytest_args, list)
+        args = [self.pytest_args] if not isinstance(self.pytest_args, list) else self.pytest_args
         errno = pytest.main(args)
         sys.exit(errno)
 
