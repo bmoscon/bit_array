@@ -1,5 +1,8 @@
 # Bit Array
 
+[![Travis CI](https://travis-ci.org/bmoscon/bit_array.svg?branch=master)](https://travis-ci.org/bmoscon/bit_array)
+
+
 A simple bit array in pure python. Sample use:
 
 ```
