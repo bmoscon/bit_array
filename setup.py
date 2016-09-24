@@ -10,7 +10,6 @@ associated with this software.
 from setuptools import setup
 from setuptools import find_packages
 from setuptools.command.test import test as TestCommand
-import six
 import sys
 
 
@@ -28,7 +27,7 @@ class PyTest(TestCommand):
 
     def run_tests(self):
         import pytest
-        args = [self.pytest_args] if isinstance(self.pytest_args, six.string_types) else list(self.pytest_args)
+        args = [self.pytest_args] if not isinstance(self.pytest_args, list)
         errno = pytest.main(args)
         sys.exit(errno)
 
