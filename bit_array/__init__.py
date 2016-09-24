@@ -1,1 +1,1 @@
-from bit_array import BitArray
+from .bit_array import BitArray
