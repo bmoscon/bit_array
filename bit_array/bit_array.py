@@ -57,7 +57,7 @@ class BitArray(object):
 
     def __getitem__(self, index):
         if isinstance(index, slice):
-            return BitArray([self[x] for x in xrange(*index.indices(len(self)))])
+            return BitArray([self[x] for x in range(*index.indices(len(self)))])
         else:
             if index >= self.size:
                 raise IndexError
