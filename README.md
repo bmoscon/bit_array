@@ -1,6 +1,8 @@
 # Bit Array
 
 [![Travis CI](https://travis-ci.org/bmoscon/bit_array.svg?branch=master)](https://travis-ci.org/bmoscon/bit_array)
+[![License](https://img.shields.io/badge/license-XFree86-blue.svg)](LICENSE)
+
 
 
 A simple bit array in pure python. Sample use:
